@@ -32,11 +32,24 @@
       padding: 40px 20px;
     }
     
+    @media (max-width: 768px) {
+      .container {
+        padding: 20px 12px;
+      }
+    }
+    
     header {
       text-align: center;
       margin-bottom: 60px;
       padding: 60px 20px 40px;
       background: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 100%);
+    }
+    
+    @media (max-width: 768px) {
+      header {
+        margin-bottom: 32px;
+        padding: 32px 16px 24px;
+      }
     }
     
     h1 {
@@ -50,11 +63,29 @@
       background-clip: text;
     }
     
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 36px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 28px;
+      }
+    }
+    
     .subtitle {
       font-size: 21px;
       color: #86868b;
       font-weight: 400;
       margin-bottom: 12px;
+    }
+    
+    @media (max-width: 768px) {
+      .subtitle {
+        font-size: 17px;
+      }
     }
     
     .date-range {
@@ -78,6 +109,14 @@
     @media (max-width: 768px) {
       .stats-overview {
         grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-bottom: 32px;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .stats-overview {
+        grid-template-columns: 1fr;
       }
     }
     
@@ -90,6 +129,12 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
       overflow: hidden;
+    }
+    
+    @media (max-width: 768px) {
+      .stat-card {
+        padding: 20px 16px;
+      }
     }
     
     .stat-card::before {
@@ -230,6 +275,13 @@
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     }
     
+    @media (max-width: 768px) {
+      .card {
+        padding: 20px;
+        border-radius: 12px;
+      }
+    }
+    
     .card:hover {
       box-shadow: 0 12px 24px rgba(0,0,0,0.08);
       border-color: rgba(0,113,227,0.1);
@@ -248,6 +300,14 @@
       gap: 12px;
     }
     
+    @media (max-width: 768px) {
+      .card h2 {
+        font-size: 22px;
+        margin-bottom: 16px;
+        padding-bottom: 12px;
+      }
+    }
+    
     .info-icon {
       display: inline-block;
       width: 20px;
@@ -264,7 +324,8 @@
       margin-left: 8px;
     }
     
-    .info-icon:hover::after {
+    .info-icon:hover::after,
+    .info-icon:active::after {
       content: attr(data-tooltip);
       position: absolute;
       left: 30px;
@@ -281,6 +342,17 @@
       max-width: 300px;
       white-space: normal;
       width: max-content;
+    }
+    
+    @media (max-width: 768px) {
+      .info-icon:hover::after,
+      .info-icon:active::after {
+        left: auto;
+        right: 0;
+        max-width: 250px;
+        font-size: 12px;
+        padding: 10px 14px;
+      }
     }
     
     .info-icon:hover::before {
@@ -390,6 +462,18 @@
     canvas {
       height: 350px !important;
       width: 100% !important;
+    }
+    
+    @media (max-width: 768px) {
+      canvas {
+        height: 280px !important;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      canvas {
+        height: 240px !important;
+      }
     }
     
     .topic-item {
