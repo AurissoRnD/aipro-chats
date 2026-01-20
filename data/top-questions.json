@@ -1,0 +1,1002 @@
+[
+  {
+    "count": 23604,
+    "lastAsked": "2025-06-04T08:22:23.561Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: say 2"
+  },
+  {
+    "count": 14210,
+    "lastAsked": "2025-01-23T14:18:03.783Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic. You only need to answer user questions, no need to precede the answer with assistant.If there is a code block, output it in markdown format.   \n user: say 1"
+  },
+  {
+    "count": 10752,
+    "lastAsked": "2025-11-11T23:58:39.242Z",
+    "question": ""
+  },
+  {
+    "count": 8801,
+    "lastAsked": "2025-01-25T04:10:32.002Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic. You only need to answer user questions, no need to precede the answer with assistant.If there is a code block, output it in markdown format.   \n user: hi"
+  },
+  {
+    "count": 7921,
+    "lastAsked": "2025-06-04T08:20:40.364Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: hi"
+  },
+  {
+    "count": 4351,
+    "lastAsked": "2025-06-04T08:22:12.229Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: Say ok"
+  },
+  {
+    "count": 3977,
+    "lastAsked": "2025-11-11T21:36:07.227Z",
+    "question": "hi"
+  },
+  {
+    "count": 3613,
+    "lastAsked": "2025-11-11T20:50:20.372Z",
+    "question": "merhaba"
+  },
+  {
+    "count": 3408,
+    "lastAsked": "2025-03-14T17:34:17.779Z",
+    "question": "\nUser:请将以下文本翻译成中文："
+  },
+  {
+    "count": 3322,
+    "lastAsked": "2025-11-11T13:04:46.381Z",
+    "question": "hello"
+  },
+  {
+    "count": 3051,
+    "lastAsked": "2025-05-22T14:14:17.919Z",
+    "question": "user: hi"
+  },
+  {
+    "count": 2848,
+    "lastAsked": "2025-11-11T17:20:23.939Z",
+    "question": "continue"
+  },
+  {
+    "count": 2824,
+    "lastAsked": "2025-11-11T23:52:21.829Z",
+    "question": "hola"
+  },
+  {
+    "count": 2719,
+    "lastAsked": "2025-11-09T19:56:02.433Z",
+    "question": "oi"
+  },
+  {
+    "count": 2374,
+    "lastAsked": "2025-11-11T14:28:33.222Z",
+    "question": "more"
+  },
+  {
+    "count": 2187,
+    "lastAsked": "2024-12-15T04:23:52.934Z",
+    "question": "user: say 1"
+  },
+  {
+    "count": 2048,
+    "lastAsked": "2025-04-22T19:20:57.324Z",
+    "question": "Explain quantum computing in simple terms"
+  },
+  {
+    "count": 1984,
+    "lastAsked": "2025-11-11T19:15:08.943Z",
+    "question": "ola"
+  },
+  {
+    "count": 1867,
+    "lastAsked": "2025-11-11T23:09:15.096Z",
+    "question": "Hello"
+  },
+  {
+    "count": 1765,
+    "lastAsked": "2025-11-11T20:11:33.035Z",
+    "question": "Hi"
+  },
+  {
+    "count": 1751,
+    "lastAsked": "2025-11-11T18:11:18.275Z",
+    "question": "shorter"
+  },
+  {
+    "count": 1626,
+    "lastAsked": "2025-06-04T08:00:15.195Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: say 1"
+  },
+  {
+    "count": 1607,
+    "lastAsked": "2025-11-11T23:56:00.272Z",
+    "question": "selam"
+  },
+  {
+    "count": 1407,
+    "lastAsked": "2025-11-11T21:58:15.614Z",
+    "question": "rewrite"
+  },
+  {
+    "count": 1374,
+    "lastAsked": "2025-11-11T17:00:45.456Z",
+    "question": "thank you"
+  },
+  {
+    "count": 1347,
+    "lastAsked": "2025-11-11T16:56:59.265Z",
+    "question": "Hola"
+  },
+  {
+    "count": 1269,
+    "lastAsked": "2025-11-11T19:14:26.972Z",
+    "question": "Improve Writing to be more engaging"
+  },
+  {
+    "count": 1266,
+    "lastAsked": "2025-04-07T10:42:44.593Z",
+    "question": "Say 'Wonderful' "
+  },
+  {
+    "count": 1256,
+    "lastAsked": "2025-11-11T23:34:48.838Z",
+    "question": "ok"
+  },
+  {
+    "count": 1219,
+    "lastAsked": "2025-11-10T14:45:59.208Z",
+    "question": "bom dia"
+  },
+  {
+    "count": 1203,
+    "lastAsked": "2025-11-11T19:17:22.184Z",
+    "question": "again"
+  },
+  {
+    "count": 1135,
+    "lastAsked": "2025-11-11T23:25:04.613Z",
+    "question": "try again"
+  },
+  {
+    "count": 1133,
+    "lastAsked": "2025-11-11T22:25:06.477Z",
+    "question": "yes"
+  },
+  {
+    "count": 1100,
+    "lastAsked": "2025-11-11T13:02:29.146Z",
+    "question": "Thank you"
+  },
+  {
+    "count": 1098,
+    "lastAsked": "2025-11-11T13:32:07.197Z",
+    "question": "ciao"
+  },
+  {
+    "count": 1087,
+    "lastAsked": "2025-08-12T06:55:56.399Z",
+    "question": "What model are you?"
+  },
+  {
+    "count": 1045,
+    "lastAsked": "2025-06-04T08:07:35.045Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: You just need to output 'hi' next."
+  },
+  {
+    "count": 1026,
+    "lastAsked": "2025-11-08T17:16:03.332Z",
+    "question": "Merhaba"
+  },
+  {
+    "count": 993,
+    "lastAsked": "2025-11-11T21:19:16.015Z",
+    "question": "Improve Writing by fixing grammar"
+  },
+  {
+    "count": 972,
+    "lastAsked": "2025-06-04T08:09:34.258Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: say test"
+  },
+  {
+    "count": 924,
+    "lastAsked": "2025-06-04T07:50:24.435Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,  Please strictly follow your default identity to answer user questions. The identity you assume is: You are a helpful assistant. \n user: Hello!"
+  },
+  {
+    "count": 921,
+    "lastAsked": "2025-11-11T18:06:06.523Z",
+    "question": "?"
+  },
+  {
+    "count": 900,
+    "lastAsked": "2025-11-11T21:05:20.880Z",
+    "question": "Improve Writing for clarity"
+  },
+  {
+    "count": 899,
+    "lastAsked": "2025-11-11T18:40:24.564Z",
+    "question": "olá"
+  },
+  {
+    "count": 885,
+    "lastAsked": "2025-11-11T03:48:08.345Z",
+    "question": "make it shorter"
+  },
+  {
+    "count": 848,
+    "lastAsked": "2025-11-11T18:51:36.167Z",
+    "question": "Olá"
+  },
+  {
+    "count": 841,
+    "lastAsked": "2025-11-11T23:25:44.854Z",
+    "question": "another"
+  },
+  {
+    "count": 841,
+    "lastAsked": "2025-11-11T18:18:41.611Z",
+    "question": "shorten"
+  },
+  {
+    "count": 838,
+    "lastAsked": "2025-06-04T08:21:06.910Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: say hi"
+  },
+  {
+    "count": 827,
+    "lastAsked": "2025-06-04T08:19:57.549Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: This is test! just say 1!"
+  },
+  {
+    "count": 798,
+    "lastAsked": "2025-09-06T04:01:24.775Z",
+    "question": "Please use the assessment to write  a detail HPI and a CC with the name of the patient in a complete sentence,  and ICD 10 that reflect not just their medical and psychiatric conditions but also their personal life, strengths, social support systems, lifestyle, and any other factors affecting their overall well-being. I need an HPI that encompasses the breadth and depth of the patient's experiences and needs. I want to ensure that the provided HPI will be thorough, integrated, and reflective of all aspects of the patient's life. Please no titles between paragraphs.  Please remember to write a cc with the name of the patient in a complete sentence."
+  },
+  {
+    "count": 798,
+    "lastAsked": "2025-11-11T22:33:24.890Z",
+    "question": "less formal"
+  },
+  {
+    "count": 753,
+    "lastAsked": "2025-11-11T20:16:40.201Z",
+    "question": "boa tarde"
+  },
+  {
+    "count": 675,
+    "lastAsked": "2025-11-11T21:37:41.812Z",
+    "question": "Summarize this article"
+  },
+  {
+    "count": 671,
+    "lastAsked": "2025-05-26T11:25:39.088Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,  Please strictly follow your default identity to answer user questions. The identity you assume is: \n你是一位AIGC提示词专家。你的任务是：根据用户提供的主题，创建两类提示词（文生图和图生视频），用于Runway AI平台创作高质量内容。\n\n这是一个创意过程：首先通过文生图提示词创建静态图像，然后使用图生视频提示词将该图像转化为动态视频。你的提示词需要富有想象力、视觉冲击力，并能激发出令人惊叹的AI创作效果。\n\n严格按照以下JSON格式输出：\n\n{\n  \"image_prompt_Y\": \"详细描述场景、环境、光线、风格和氛围；若包含人物或动物，明确指定数量和空间位置关系；为每个实体添加'proper anatomy'、'well-proportioned'等描述；使用'photorealistic, 4K, professional photography'等术语提升图像质量\",\n  \n  \"image_prompt_N\": \"针对所描述主题的特定负向提示词——分析主题可能出现的特有问题并精确排除，同时包含以下基础排除项：additional limbs, extra heads, deformed, distorted, disfigured, asymmetrical, disproportionate, bad anatomy, extra fingers, too many fingers, missing limbs, floating limbs, disconnected limbs, mutation, blurry, low quality。此外，每次随机添加2-3个与主题相关的独特负向排除项，确保多样性和针对性\",\n  \n  \"video_prompt_Y\": \"描述自然的动态效果，如镜头移动、场景元素的合理动作；保持与静态图像的场景一致性；使用专业电影术语描述镜头语言；确保动作流畅自然\",\n  \n  \"video_prompt_N\": \"针对视频主题特有的动态问题进行排除，包括但不限于：sudden movements, unnatural motion, distortion, flickering, warping, anatomy changes, glitching, object multiplication, disappearing elements。同时增加2-3个与当前视频场景特别相关的负向提示词，提高针对性\"\n}\n\n特别注意：\n1. 负向提示词必须与主题高度相关，分析主题可能产生的特定问题并有针对性地排除\n2. 每次生成时，负向提示词应包含一些随机性和变化性，而不是完全固定的模板\n3. 为不同类型的主题（风景、人物、动物、建筑等）定制差异化的负向提示词\n4. 生成的内容避免多头、变形等诡异效果\n5. 提示词富有创意且技术准确，能够激发AI系统创造出令人惊叹的视觉效果\n6. 如果用户的输入本身是随意输入的东西甚至是空的情况，你就当用户给的信息是随机种子，自己区发挥\n7. 需要全部是英文\n \n user: 这是用户给定的信息：\n受伤的卡皮巴拉躺在病床上或者躺在手术台上，表现得非常可怜，然后卡皮巴拉还在哭泣，下面是一个卡皮巴拉的生成提示词\nA photograph of a capybara, the world's largest rodent, swimming underwater in a clear blue pool. The capybara wears bright orange sunglasses, adding a playful touch. Sunlight filters through the water, creating dappled reflections on the pool floor. Palm trees and a wooden structure are visible in the background, suggesting a tropical setting. "
+  },
+  {
+    "count": 633,
+    "lastAsked": "2025-11-11T10:15:38.988Z",
+    "question": "thanks"
+  },
+  {
+    "count": 624,
+    "lastAsked": "2025-11-11T18:02:33.326Z",
+    "question": "no"
+  },
+  {
+    "count": 600,
+    "lastAsked": "2025-04-23T06:34:46.679Z",
+    "question": "Got any creative ideas for a 10 year old's birthday?"
+  },
+  {
+    "count": 597,
+    "lastAsked": "2025-01-23T12:22:04.200Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic. You only need to answer user questions, no need to precede the answer with assistant.If there is a code block, output it in markdown format.   \n user: Hello, please tell me a joke."
+  },
+  {
+    "count": 592,
+    "lastAsked": "2025-11-06T12:33:48.144Z",
+    "question": "test"
+  },
+  {
+    "count": 586,
+    "lastAsked": "2024-11-23T11:01:58.767Z",
+    "question": "### 最高系统指令:\n- 理解问题的明确和隐含要求\n- 保持回答连贯，不重复历史内容\n- 考虑异常情况及其影响\n- 完成回答后必须在末尾添加上§\n\n\n### 当前问题:\nhi"
+  },
+  {
+    "count": 583,
+    "lastAsked": "2025-11-07T01:02:07.081Z",
+    "question": "Thank you!"
+  },
+  {
+    "count": 577,
+    "lastAsked": "2025-11-11T21:59:53.358Z",
+    "question": "Translate in English"
+  },
+  {
+    "count": 564,
+    "lastAsked": "2025-11-11T12:50:39.860Z",
+    "question": "Can you improve a text?"
+  },
+  {
+    "count": 544,
+    "lastAsked": "2025-11-07T17:07:43.419Z",
+    "question": "another one"
+  },
+  {
+    "count": 542,
+    "lastAsked": "2025-06-04T08:22:07.007Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: 基于主题\"麦地那，璀璨的灯塔，建筑和人物必须真实，人物动作必须符合逻辑\"，请帮我生成一对提示词：\n                1. 一个用于Runway文生图(text-to-image)的提示词\n                2. 一个用于图生视频(image-to-video)的提示词\n                \n                要求：\n                - 提示词要具体且富有创意\n                - 确保两个提示词的内容相互关联\n                - 文生图的结果要适合用作图生视频的输入\n                \n                请严格按照以下JSON格式返回，不要包含任何其他内容：\n                {\n                    \"text2img\": \"详细的文生图提示词\",\n                    \"img2video\": \"与文生图相关的视频生成提示词\"\n                }\n        "
+  },
+  {
+    "count": 518,
+    "lastAsked": "2025-11-07T20:06:38.564Z",
+    "question": "boa noite"
+  },
+  {
+    "count": 511,
+    "lastAsked": "2025-11-11T15:21:58.683Z",
+    "question": "Thanks"
+  },
+  {
+    "count": 510,
+    "lastAsked": "2025-11-11T16:23:52.518Z",
+    "question": "Bom dia"
+  },
+  {
+    "count": 503,
+    "lastAsked": "2025-11-11T23:02:51.730Z",
+    "question": "sim"
+  },
+  {
+    "count": 498,
+    "lastAsked": "2025-11-11T20:05:51.414Z",
+    "question": "si"
+  },
+  {
+    "count": 497,
+    "lastAsked": "2025-11-11T08:47:19.129Z",
+    "question": "1+1"
+  },
+  {
+    "count": 483,
+    "lastAsked": "2025-11-10T07:59:39.798Z",
+    "question": "bonjour"
+  },
+  {
+    "count": 477,
+    "lastAsked": "2025-11-11T19:13:19.577Z",
+    "question": "Oi"
+  },
+  {
+    "count": 476,
+    "lastAsked": "2025-11-11T11:44:20.706Z",
+    "question": "simpler"
+  },
+  {
+    "count": 468,
+    "lastAsked": "2025-11-11T14:58:50.919Z",
+    "question": "Ciao"
+  },
+  {
+    "count": 465,
+    "lastAsked": "2025-11-05T15:29:53.399Z",
+    "question": "More"
+  },
+  {
+    "count": 440,
+    "lastAsked": "2025-04-22T21:50:51.298Z",
+    "question": "How do I make an HTTP request in Javascript?"
+  },
+  {
+    "count": 431,
+    "lastAsked": "2025-11-08T00:49:27.599Z",
+    "question": "quyana"
+  },
+  {
+    "count": 431,
+    "lastAsked": "2025-11-07T20:13:53.580Z",
+    "question": "hey"
+  },
+  {
+    "count": 430,
+    "lastAsked": "2025-11-11T06:10:38.775Z",
+    "question": "gracias"
+  },
+  {
+    "count": 416,
+    "lastAsked": "2025-01-07T07:29:53.641Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic. You only need to answer user questions, no need to precede the answer with assistant.If there is a code block, output it in markdown format.  Please strictly follow your default identity to answer user questions. The identity you assume is:  \n user: hi"
+  },
+  {
+    "count": 414,
+    "lastAsked": "2025-11-01T19:04:45.005Z",
+    "question": "başka"
+  },
+  {
+    "count": 404,
+    "lastAsked": "2024-12-01T12:29:35.603Z",
+    "question": "user: 请先在推理区自行出一个推理题目，然后推理解答，注意需要思考，，推理完毕后，检测自己是否输出了过程，如果没输出过程，在输出区只需要输出”我是o1“，如果输出了过程，需要说”我不是o1“"
+  },
+  {
+    "count": 400,
+    "lastAsked": "2025-04-14T10:43:47.517Z",
+    "question": "user: 介绍一下自己，不要太长。"
+  },
+  {
+    "count": 387,
+    "lastAsked": "2025-11-08T17:28:59.208Z",
+    "question": "Shorter"
+  },
+  {
+    "count": 382,
+    "lastAsked": "2025-01-23T14:16:37.470Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic. You only need to answer user questions, no need to precede the answer with assistant.If there is a code block, output it in markdown format.   \n user: just say test!"
+  },
+  {
+    "count": 380,
+    "lastAsked": "2025-10-07T07:06:15.765Z",
+    "question": "Mi puoi tradurre questo testo?"
+  },
+  {
+    "count": 377,
+    "lastAsked": "2025-11-10T17:27:24.792Z",
+    "question": "영어로"
+  },
+  {
+    "count": 374,
+    "lastAsked": "2025-05-26T13:20:48.365Z",
+    "question": "make it more idiomatic"
+  },
+  {
+    "count": 370,
+    "lastAsked": "2025-11-11T10:37:16.069Z",
+    "question": "Try again"
+  },
+  {
+    "count": 368,
+    "lastAsked": "2025-11-11T13:28:18.122Z",
+    "question": "reword"
+  },
+  {
+    "count": 364,
+    "lastAsked": "2025-11-11T20:07:27.522Z",
+    "question": "Ok"
+  },
+  {
+    "count": 356,
+    "lastAsked": "2025-04-21T18:11:11.170Z",
+    "question": "A cozy treehouse café nestled in a lush, bioluminescent forest at twilight, with floating lanterns and a spiraling staircase"
+  },
+  {
+    "count": 353,
+    "lastAsked": "2025-11-07T17:14:42.502Z",
+    "question": "in inglese"
+  },
+  {
+    "count": 353,
+    "lastAsked": "2025-11-11T10:20:54.518Z",
+    "question": "please edit"
+  },
+  {
+    "count": 352,
+    "lastAsked": "2025-11-08T08:29:36.988Z",
+    "question": "devam et"
+  },
+  {
+    "count": 345,
+    "lastAsked": "2025-11-10T14:23:42.659Z",
+    "question": "1"
+  },
+  {
+    "count": 341,
+    "lastAsked": "2025-02-08T12:01:49.212Z",
+    "question": "<必须执行的操作>\n- 完成回答或token限制都必须在回答的末尾添加上符号§\n- 理解问题的明确和隐含要求\n- 保持回答连贯，不重复历史内容\n- 考虑异常情况及其影响\n- 数据结构\n  - 问题在<当前问题>标签内\n  - 历史对话在<历史对话>标签内\n  - 其他内容视作系统指令\n  - 回答不要包含标签\n- 回答完成后请自检<必须执行的操作>中的要求\n</必须执行的操作>\n\n<当前问题>\nhi\n</当前问题>"
+  },
+  {
+    "count": 337,
+    "lastAsked": "2025-11-04T10:31:57.728Z",
+    "question": "devam"
+  },
+  {
+    "count": 335,
+    "lastAsked": "2025-11-09T12:12:24.379Z",
+    "question": "continua"
+  },
+  {
+    "count": 333,
+    "lastAsked": "2025-11-03T21:42:46.056Z",
+    "question": "outra"
+  },
+  {
+    "count": 330,
+    "lastAsked": "2025-11-07T14:51:09.285Z",
+    "question": "mais"
+  },
+  {
+    "count": 328,
+    "lastAsked": "2025-11-11T23:39:25.730Z",
+    "question": "Yes"
+  },
+  {
+    "count": 328,
+    "lastAsked": "2025-11-11T21:52:57.791Z",
+    "question": "Thank you."
+  },
+  {
+    "count": 328,
+    "lastAsked": "2025-11-10T19:52:54.725Z",
+    "question": "more please"
+  },
+  {
+    "count": 327,
+    "lastAsked": "2025-10-30T17:43:17.837Z",
+    "question": "Boa tarde"
+  },
+  {
+    "count": 323,
+    "lastAsked": "2025-11-10T20:39:02.964Z",
+    "question": "Analyze Data trends in this dataset"
+  },
+  {
+    "count": 322,
+    "lastAsked": "2025-11-06T21:37:04.460Z",
+    "question": "türkçe"
+  },
+  {
+    "count": 319,
+    "lastAsked": "2025-11-11T12:12:46.220Z",
+    "question": "Selam"
+  },
+  {
+    "count": 318,
+    "lastAsked": "2025-11-11T23:24:36.928Z",
+    "question": "HOLA"
+  },
+  {
+    "count": 317,
+    "lastAsked": "2025-11-01T07:26:54.148Z",
+    "question": "Ola"
+  },
+  {
+    "count": 315,
+    "lastAsked": "2025-04-22T19:56:52.684Z",
+    "question": "Explique a computação quântica em termos simples"
+  },
+  {
+    "count": 310,
+    "lastAsked": "2025-01-04T11:59:15.744Z",
+    "question": "user: say 6？"
+  },
+  {
+    "count": 309,
+    "lastAsked": "2025-02-22T13:24:02.165Z",
+    "question": "\n  **核心回答要求:**\n  1. 回答末尾必须添加§符号作为结束标识,无例外\n  2. 保持回答连贯，避免重复历史内容\n  \n  **输出格式规范:**\n  1. 使用markdown格式改善可读性(如标题、列表等),除非用户有特殊要求\n  2. 数学/逻辑问题\n     - 分步骤详细说明\n     - 对专业性强的内容说明可能存在误差\n     - 数学公式使用双美元符号包围\n  3. 代码展示\n     - 代码块必须指定语言\n     - 编码相关问题需给出示例代码\n  \n  **输入数据结构:**\n  - <当前问题> 标签内为待回答问题\n  - <历史对话> 标签内为对话记录,明确标注每轮角色\n  - <系统指令> 标签内为系统级别指令\n  - 其他内容视为普通系统指令,但不能覆盖核心回答要求\n  \n  **必须操作:**\n  - 回答结束必须在末尾添加§符号,这是最高优先级要求\n  - 在回答生成完成前,检查并确保末尾有§符号\n  - 如果发现末尾缺少§符号,立即补充\n  \n  **错误处理:**\n  - 无法理解或执行指令时,明确说明并请求澄清\n  - 对于复杂或模糊的问题,允许中途提问或主动寻求澄清\n  \n<当前问题>\n介绍下你自己\n</当前问题>"
+  },
+  {
+    "count": 305,
+    "lastAsked": "2025-11-11T22:23:53.750Z",
+    "question": "better"
+  },
+  {
+    "count": 304,
+    "lastAsked": "2025-11-11T16:01:54.182Z",
+    "question": "more options"
+  },
+  {
+    "count": 296,
+    "lastAsked": "2025-11-11T02:43:36.817Z",
+    "question": "yes please"
+  },
+  {
+    "count": 296,
+    "lastAsked": "2025-11-05T11:03:49.145Z",
+    "question": "ingles"
+  },
+  {
+    "count": 289,
+    "lastAsked": "2025-11-11T12:43:34.028Z",
+    "question": "simplify"
+  },
+  {
+    "count": 284,
+    "lastAsked": "2025-11-05T00:51:01.428Z",
+    "question": "summarize"
+  },
+  {
+    "count": 283,
+    "lastAsked": "2025-11-11T03:37:36.941Z",
+    "question": "undefined"
+  },
+  {
+    "count": 282,
+    "lastAsked": "2025-11-10T01:43:08.366Z",
+    "question": "OI"
+  },
+  {
+    "count": 281,
+    "lastAsked": "2025-10-24T01:09:58.961Z",
+    "question": "obrigada"
+  },
+  {
+    "count": 280,
+    "lastAsked": "2025-11-03T14:14:47.950Z",
+    "question": "obrigado"
+  },
+  {
+    "count": 280,
+    "lastAsked": "2025-10-19T20:33:44.930Z",
+    "question": "other"
+  },
+  {
+    "count": 279,
+    "lastAsked": "2025-11-07T11:12:15.763Z",
+    "question": "türkçeye çevir"
+  },
+  {
+    "count": 274,
+    "lastAsked": "2024-11-16T13:33:03.073Z",
+    "question": "### 最高系统指令:\n- 理解问题的明确和隐含要求\n- 保持回答连贯，不重复历史内容\n- 考虑异常情况及其影响\n- 完成回答后必须在末尾添加上§\n### 当前问题:\n介绍下你自己"
+  },
+  {
+    "count": 271,
+    "lastAsked": "2024-11-18T13:07:00.491Z",
+    "question": "### 最高系统指令:\n- 理解问题的明确和隐含要求\n- 保持回答连贯，不重复历史内容\n- 考虑异常情况及其影响\n- 结束回答必须在末尾添加上符号§\n\n\n### 当前问题:\nhi"
+  },
+  {
+    "count": 269,
+    "lastAsked": "2025-11-11T23:24:10.502Z",
+    "question": "Translate in Spanish"
+  },
+  {
+    "count": 263,
+    "lastAsked": "2025-11-11T18:20:56.065Z",
+    "question": "Expand Ideas with more details"
+  },
+  {
+    "count": 262,
+    "lastAsked": "2025-06-04T08:08:22.124Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: 只输出1"
+  },
+  {
+    "count": 261,
+    "lastAsked": "2025-11-11T15:25:02.002Z",
+    "question": "resuma"
+  },
+  {
+    "count": 258,
+    "lastAsked": "2025-11-04T01:45:35.149Z",
+    "question": "Boa noite"
+  },
+  {
+    "count": 258,
+    "lastAsked": "2025-01-02T16:08:48.399Z",
+    "question": "user: 写一个10个字的冷笑话"
+  },
+  {
+    "count": 255,
+    "lastAsked": "2025-04-24T19:55:34.557Z",
+    "question": "services/empresa: # Importa a classe HTTPException do FastAPI para tratamento de erros HTTP\nfrom fastapi import HTTPException, status\n# Importa as funções do repositório de empresas\nfrom app.repositories.empresa import (get_empresa, get_empresa_by_cnpj, get_empresas,\n    create_empresa, update_empresa, delete_empresa, search_by_name\n)\n# Importa os schemas (modelos) Pydantic para validação de dados\nfrom app.schemas.empresa import EmpresaCreate, EmpresaUpdate\n# Importa tipos para type hints\nfrom typing import List, Optional\n# Importa Session do SQLAlchemy para interação com o banco\nfrom sqlalchemy.orm import Session\n\nclass EmpresaService:\n    \"\"\"Classe de serviço que encapsula a lógica de negócios para empresas\"\"\"\n\n    @staticmethod # decorador para indicar que o método é estático , ou seja, não precisa de instância\n    def get_empresa(db: Session, empresa_id: int):\n        \"\"\"\n        Obtém uma empresa pelo ID.\n\n        Comandos:\n        - get_empresa(db, empresa_id): Chama a função do repositório para buscar empresa\n        - if not empresa: Verifica se a empresa não foi encontrada\n        - raise HTTPException: Levanta erro 404 se empresa não existir\n        - return empresa: Retorna a empresa encontrada\n        \"\"\"\n        empresa = get_empresa(db, empresa_id)\n        if not empresa:\n            raise HTTPException(\n                status_code=status.HTTP_404_NOT_FOUND,  # Código HTTP 404\n                detail=\"Empresa não encontrada\"         # Mensagem de erro\n            )\n        return empresa\n\n    @staticmethod\n    def get_empresa_by_cnpj(db: Session, cnpj: str):\n        \"\"\"\n        Obtém uma empresa pelo CNPJ.\n\n        Comandos:\n        - get_empresa_by_cnpj(db, cnpj): Busca empresa no repositório\n        - raise HTTPException: Se não encontrar, levanta erro 404\n        - return empresa: Retorna a empresa se encontrada\n        \"\"\"\n        empresa = get_empresa_by_cnpj(db, cnpj)\n        if not empresa:\n            raise HTTPException(\n                status_code=status.HTTP_404_NOT_FOUND,\n                detail=\"Empresa não encontrada\"\n            )\n        return empresa\n\n    @staticmethod\n    def get_empresas(db: Session, skip: int = 0, limit: int = 100):\n        \"\"\"\n        Lista empresas com paginação.\n\n        Comandos:\n        - get_empresas(db, skip, limit): Chama repositório para listagem paginada\n        - return: Retorna diretamente o resultado da consulta\n        \"\"\"\n        return get_empresas(db, skip, limit)\n\n    @staticmethod\n    def create_empresa(db: Session, empresa_data: EmpresaCreate):\n        \"\"\"\n        Cria uma nova empresa com validação de CNPJ único.\n\n        Comandos:\n        - get_empresa_by_cnpj(db, empresa_data.cnpj): Verifica se CNPJ já existe\n        - raise HTTPException: Se CNPJ existir, levanta erro 400 (Bad Request)\n        - create_empresa(db, empresa_data): Chama repositório para criação\n        - return: Retorna a empresa criada\n        \"\"\"\n        if get_empresa_by_cnpj(db, empresa_data.cnpj):\n            raise HTTPException(\n                status_code=status.HTTP_400_BAD_REQUEST,  # Código HTTP 400\n                detail=\"CNPJ já cadastrado\"              # Mensagem de erro\n            )\n        return create_empresa(db, empresa_data)\n\n    @staticmethod\n    def update_empresa(db: Session, empresa_id: int, empresa_data: EmpresaUpdate):\n        \"\"\"\n        Atualiza uma empresa existente.\n\n        Comandos:\n        - get_empresa(db, empresa_id): Verifica existência da empresa\n        - raise HTTPException: Se não existir, levanta erro 404\n        - update_empresa(db, empresa_id, empresa_data): Chama repositório para atualização\n        - return: Retorna a empresa atualizada\n        \"\"\"\n        empresa = get_empresa(db, empresa_id)\n        if not empresa:\n            raise HTTPException(\n                status_code=status.HTTP_404_NOT_FOUND,\n                detail=\"Empresa não encontrada\"\n            )\n        return update_empresa(db, empresa_id, empresa_data)\n\n    @staticmethod\n    def delete_empresa(db: Session, empresa_id: int):\n        \"\"\"\n        Remove uma empresa do sistema.\n\n        Comandos:\n        - get_empresa(db, empresa_id): Verifica existência da empresa\n        - raise HTTPException: Se não existir, levanta erro 404\n        - delete_empresa(db, empresa_id): Chama repositório para exclusão\n        - return: Retorna a empresa deletada\n        \"\"\"\n        empresa = get_empresa(db, empresa_id)\n        if not empresa:\n            raise HTTPException(\n                status_code=status.HTTP_404_NOT_FOUND,\n                detail=\"Empresa não encontrada\"\n            )\n        return delete_empresa(db, empresa_id)\n, repositories/empresa.py: from sqlalchemy.orm import Session\nfrom app.models.empresa import Empresa\nfrom app.schemas.empresa import EmpresaCreate, EmpresaUpdate\nfrom app.repositories.base import BaseRepository\nfrom typing import List, Optional\n\n\nclass EmpresaRepository(BaseRepository[Empresa, EmpresaCreate, EmpresaUpdate]):\n    \"\"\"\n    Repositório para operações CRUD na tabela Empresa.\n    Herda de BaseRepository para funcionalidades comuns.\n    \"\"\"\n\n    def __init__(self, db: Session):\n        \"\"\"\n        Inicializa o repositório com o modelo e sessão do banco de dados.\n\n        Args:\n            db: Sessão do banco de dados (dependency injection)\n        \"\"\"\n        super().__init__(Empresa, db)\n\n\n    def get_empresa(db: Session, empresa_id: int) -> Empresa | None:\n        \"\"\"\n        Obtém uma empresa pelo ID.\n\n        Comandos Python/SQLAlchemy explicados:\n        - db.query(Empresa): Cria uma query para a tabela Empresa\n        - .filter(Empresa.id == empresa_id): Adiciona condição WHERE id = empresa_id\n        - .first(): Retorna o primeiro resultado ou None se não existir\n        \"\"\"\n        return db.query(Empresa).filter(Empresa.id == empresa_id).first()\n\n\n    def get_empresa_by_cnpj(self, cnpj: str) -> Empresa | None:\n        \"\"\"\n        Obtém uma empresa pelo CNPJ.\n\n        Comandos Python/SQLAlchemy explicados:\n        - db.query(Empresa): Inicia uma query na tabela Empresa\n        - .filter(Empresa.cnpj == cnpj): Filtra registros onde cnpj = parâmetro cnpj\n        - .first(): Retorna o primeiro registro encontrado ou None\n        \"\"\"\n        return self.db.query(self.model).filter(self.model.cnpj == cnpj).first()\n\n    def search_by_name(self, name: str) -> list[Empresa]:\n        \"\"\"Busca empresas por nome (case insensitive, partial match)\"\"\"\n        return self.db.query(self.model).filter(\n            self.model.nome.ilike(f\"%{name}%\")\n        ).all()\n\n\n    def get_empresas(db: Session, skip: int = 0, limit: int = 100) -> List[Empresa]:\n        \"\"\"\n        Lista empresas com paginação.\n\n        Comandos Python/SQLAlchemy explicados:\n        - db.query(Empresa): Prepara query para selecionar empresas\n        - .offset(skip): Pula os primeiros 'skip' registros (paginacao)\n        - .limit(limit): Limita o resultado a 'limit' registros\n        - .all(): Executa a query e retorna todos os resultados como lista\n        \"\"\"\n        return db.query(Empresa).offset(skip).limit(limit).all()\n\n\n    def create_empresa(self, empresa: EmpresaCreate) -> Empresa:\n        \"\"\"\n        Cria uma nova empresa no banco de dados.\n\n        Comandos Python/SQLAlchemy explicados:\n\n        \"\"\"\n        if self.get_empresa_by_cnpj(empresa.cnpj):\n            raise ValueError(\"CNPJ já cadastrado\")\n        return super().create(empresa)\n\n    def update_empresa(\n        self, empresa_id: int, empresa: EmpresaUpdate\n    ) -> Empresa | None:\n        \"\"\"\n        Atualiza uma empresa existente.\n\n        \"\"\"\n        return super().update(empresa_id, empresa)\n\n\n    def delete_empresa(db: Session, empresa_id: int) -> Optional[Empresa]:\n        \"\"\"\n        Remove uma empresa do banco de dados.\n\n        \"\"\"\n        return super().delete(empresa_id)\ngive me a error: fastapi-frotas   |   File \"<frozen importlib._bootstrap>\", line 1387, in _gcd_import\nfastapi-frotas   |   File \"<frozen importlib._bootstrap>\", line 1360, in _find_and_load\nfastapi-frotas   |   File \"<frozen importlib._bootstrap>\", line 1331, in _find_and_load_unlocked\nfastapi-frotas   |   File \"<frozen importlib._bootstrap>\", line 935, in _load_unlocked\nfastapi-frotas   |   File \"<frozen importlib._bootstrap_external>\", line 999, in exec_module\nfastapi-frotas   |   File \"<frozen importlib._bootstrap>\", line 488, in _call_with_frames_removed\nfastapi-frotas   |   File \"/app/app/main.py\", line 3, in <module>\nfastapi-frotas   |     from app.routes import user, role, motivo, empresa, tipo_alerta, tipo_veiculo\nfastapi-frotas   |   File \"/app/app/routes/empresa.py\", line 6, in <module>\nfastapi-frotas   |     from app.services.empresa import EmpresaService\nfastapi-frotas   |   File \"/app/app/services/empresa.py\", line 4, in <module>\nfastapi-frotas   |     from app.repositories.empresa import (get_empresa, get_empresa_by_cnpj, get_empresas,\nfastapi-frotas   | ImportError: cannot import name 'get_empresa' from 'app.repositories.empresa' (/app/app/repositories/empresa.py)\nhow can i resolve"
+  },
+  {
+    "count": 247,
+    "lastAsked": "2025-11-09T20:26:54.487Z",
+    "question": "Spark Creativity with a project idea"
+  },
+  {
+    "count": 246,
+    "lastAsked": "2025-10-22T22:55:55.912Z",
+    "question": "Hello!"
+  },
+  {
+    "count": 245,
+    "lastAsked": "2025-11-10T18:30:45.917Z",
+    "question": "Bonjour"
+  },
+  {
+    "count": 240,
+    "lastAsked": "2025-11-08T15:12:41.876Z",
+    "question": "encore"
+  },
+  {
+    "count": 240,
+    "lastAsked": "2025-10-09T11:57:41.277Z",
+    "question": "melhorar texto"
+  },
+  {
+    "count": 237,
+    "lastAsked": "2025-11-07T20:07:46.245Z",
+    "question": "Spark Creativity with a writing prompt"
+  },
+  {
+    "count": 236,
+    "lastAsked": "2025-11-11T11:35:45.734Z",
+    "question": "cat"
+  },
+  {
+    "count": 235,
+    "lastAsked": "2025-11-09T07:38:24.895Z",
+    "question": "em portugues"
+  },
+  {
+    "count": 234,
+    "lastAsked": "2025-11-07T13:46:38.303Z",
+    "question": "make shorter"
+  },
+  {
+    "count": 233,
+    "lastAsked": "2025-06-04T04:22:54.027Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: Hello!"
+  },
+  {
+    "count": 231,
+    "lastAsked": "2025-11-05T07:54:12.812Z",
+    "question": "merci"
+  },
+  {
+    "count": 231,
+    "lastAsked": "2024-11-14T08:07:51.536Z",
+    "question": "\n\n### 当前问题:\nhi\n### Guidelines:\n\n1. 理解查询： \n- 仔细阅读用户的问题，充分理解问题。\n - 找出关键部分和任何隐含假设。\n\n2. 请专注于回复用户的最新消息并保持回答的连贯性和上下文关联，避免重复或总结之前的对话内容。\n\n3. 考虑边缘情况： \n- 预测可能出现的例外或异常情况。 \n- 处理这些情况可能对结果产生的影响。"
+  },
+  {
+    "count": 229,
+    "lastAsked": "2025-11-10T21:39:13.969Z",
+    "question": "Continue"
+  },
+  {
+    "count": 229,
+    "lastAsked": "2025-11-10T13:41:02.950Z",
+    "question": "MERHABA"
+  },
+  {
+    "count": 227,
+    "lastAsked": "2025-11-09T06:14:21.430Z",
+    "question": "rephrase"
+  },
+  {
+    "count": 225,
+    "lastAsked": "2025-11-05T12:34:52.869Z",
+    "question": "summarise"
+  },
+  {
+    "count": 220,
+    "lastAsked": "2025-11-09T04:41:40.914Z",
+    "question": "chat"
+  },
+  {
+    "count": 215,
+    "lastAsked": "2025-11-10T16:14:37.859Z",
+    "question": "please continue"
+  },
+  {
+    "count": 214,
+    "lastAsked": "2025-11-11T21:11:08.653Z",
+    "question": "proceed"
+  },
+  {
+    "count": 211,
+    "lastAsked": "2025-11-11T07:40:23.969Z",
+    "question": "Si"
+  },
+  {
+    "count": 210,
+    "lastAsked": "2025-11-06T02:09:09.722Z",
+    "question": "plus court"
+  },
+  {
+    "count": 210,
+    "lastAsked": "2025-10-14T23:19:38.944Z",
+    "question": "are you sure"
+  },
+  {
+    "count": 209,
+    "lastAsked": "2025-11-06T09:40:02.051Z",
+    "question": "szia"
+  },
+  {
+    "count": 208,
+    "lastAsked": "2025-11-05T06:38:51.045Z",
+    "question": "grazie"
+  },
+  {
+    "count": 207,
+    "lastAsked": "2025-11-11T05:48:59.821Z",
+    "question": "anders"
+  },
+  {
+    "count": 207,
+    "lastAsked": "2025-11-11T13:02:33.599Z",
+    "question": "ingilizce"
+  },
+  {
+    "count": 204,
+    "lastAsked": "2025-01-23T13:52:39.893Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic. You only need to answer user questions, no need to precede the answer with assistant.If there is a code block, output it in markdown format.   \n user: hello"
+  },
+  {
+    "count": 204,
+    "lastAsked": "2025-11-10T11:54:34.955Z",
+    "question": "mas"
+  },
+  {
+    "count": 203,
+    "lastAsked": "2025-11-11T19:23:30.847Z",
+    "question": "Summarize this concept"
+  },
+  {
+    "count": 202,
+    "lastAsked": "2025-11-05T00:06:16.181Z",
+    "question": "good morning"
+  },
+  {
+    "count": 200,
+    "lastAsked": "2025-11-10T23:25:06.860Z",
+    "question": "2"
+  },
+  {
+    "count": 200,
+    "lastAsked": "2025-10-04T23:42:01.140Z",
+    "question": "özetle"
+  },
+  {
+    "count": 199,
+    "lastAsked": "2025-11-03T01:53:47.336Z",
+    "question": "shorten it"
+  },
+  {
+    "count": 194,
+    "lastAsked": "2025-11-11T09:39:17.545Z",
+    "question": "مرحبا"
+  },
+  {
+    "count": 193,
+    "lastAsked": "2025-09-22T12:26:13.600Z",
+    "question": "short"
+  },
+  {
+    "count": 192,
+    "lastAsked": "2024-11-26T05:06:44.695Z",
+    "question": "system: You are a professional, authentic machine translation engine.\nuser: ;; Treat next line as plain text input and translate it into Vietnamese Language, output translation ONLY. If translation is unnecessary (e.g. proper nouns, codes, etc.), return the original text. NO explanations. NO notes. Input:\n1 new message"
+  },
+  {
+    "count": 188,
+    "lastAsked": "2025-10-24T11:59:17.634Z",
+    "question": "melhore"
+  },
+  {
+    "count": 187,
+    "lastAsked": "2025-11-09T16:14:11.970Z",
+    "question": "thank you!"
+  },
+  {
+    "count": 186,
+    "lastAsked": "2025-11-09T21:10:22.514Z",
+    "question": "en ingles"
+  },
+  {
+    "count": 186,
+    "lastAsked": "2025-10-23T14:26:06.490Z",
+    "question": "Bom dia!"
+  },
+  {
+    "count": 184,
+    "lastAsked": "2025-10-31T05:37:26.906Z",
+    "question": "next"
+  },
+  {
+    "count": 184,
+    "lastAsked": "2025-11-06T10:20:26.716Z",
+    "question": "give 3 words"
+  },
+  {
+    "count": 184,
+    "lastAsked": "2025-11-10T11:35:14.187Z",
+    "question": "No"
+  },
+  {
+    "count": 183,
+    "lastAsked": "2025-10-22T11:05:20.125Z",
+    "question": "resumir"
+  },
+  {
+    "count": 182,
+    "lastAsked": "2025-11-10T18:03:42.613Z",
+    "question": "wrong"
+  },
+  {
+    "count": 181,
+    "lastAsked": "2025-11-06T17:39:42.066Z",
+    "question": "traduci in italiano"
+  },
+  {
+    "count": 180,
+    "lastAsked": "2025-11-04T18:40:03.132Z",
+    "question": "in english"
+  },
+  {
+    "count": 180,
+    "lastAsked": "2025-06-03T14:25:37.807Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,   \n user: Hi"
+  },
+  {
+    "count": 180,
+    "lastAsked": "2025-11-10T20:51:23.793Z",
+    "question": "Analyze Data using statistical methods"
+  },
+  {
+    "count": 179,
+    "lastAsked": "2025-09-12T16:20:51.018Z",
+    "question": "please rewrite the script"
+  },
+  {
+    "count": 179,
+    "lastAsked": "2025-11-05T13:48:27.647Z",
+    "question": "Make it shorter"
+  },
+  {
+    "count": 179,
+    "lastAsked": "2025-11-09T06:11:34.213Z",
+    "question": "evet"
+  },
+  {
+    "count": 178,
+    "lastAsked": "2025-11-08T07:50:20.837Z",
+    "question": "po polsku"
+  },
+  {
+    "count": 175,
+    "lastAsked": "2025-11-11T20:51:13.953Z",
+    "question": "hej"
+  },
+  {
+    "count": 175,
+    "lastAsked": "2025-11-08T18:17:12.474Z",
+    "question": "Cześć"
+  },
+  {
+    "count": 174,
+    "lastAsked": "2025-11-10T14:50:44.991Z",
+    "question": "are you there?"
+  },
+  {
+    "count": 173,
+    "lastAsked": "2025-10-20T02:10:38.477Z",
+    "question": "outro"
+  },
+  {
+    "count": 173,
+    "lastAsked": "2025-11-07T18:47:36.453Z",
+    "question": "more casual"
+  },
+  {
+    "count": 173,
+    "lastAsked": "2025-10-28T14:01:38.944Z",
+    "question": "cześć"
+  },
+  {
+    "count": 170,
+    "lastAsked": "2025-11-11T21:47:02.020Z",
+    "question": "Gracias"
+  },
+  {
+    "count": 169,
+    "lastAsked": "2025-05-27T01:44:44.390Z",
+    "question": "system: You are Claude, an artificial intelligence assistant developed by Anthropic.You only need to answer user questions, no need to precede the answer with assistant, The code blocks are in markdown format,  Please strictly follow your default identity to answer user questions. The identity you assume is: \n你是一位AIGC提示词专家。你的任务是：根据用户提供的主题，创建两类提示词（文生图和图生视频），用于Runway AI平台创作高质量内容。\n\n这是一个创意过程：首先通过文生图提示词创建静态图像，然后使用图生视频提示词将该图像转化为动态视频。你的提示词需要富有想象力、视觉冲击力，并能激发出令人惊叹的AI创作效果。\n\n严格按照以下JSON格式输出：\n\n{\n  \"image_prompt_Y\": \"详细描述场景、环境、光线、风格和氛围；若包含人物或动物，明确指定数量和空间位置关系；为每个实体添加'proper anatomy'、'well-proportioned'等描述；使用'photorealistic, 4K, professional photography'等术语提升图像质量\",\n  \n  \"image_prompt_N\": \"针对所描述主题的特定负向提示词——分析主题可能出现的特有问题并精确排除，同时包含以下基础排除项：additional limbs, extra heads, deformed, distorted, disfigured, asymmetrical, disproportionate, bad anatomy, extra fingers, too many fingers, missing limbs, floating limbs, disconnected limbs, mutation, blurry, low quality。此外，每次随机添加2-3个与主题相关的独特负向排除项，确保多样性和针对性\",\n  \n  \"video_prompt_Y\": \"描述自然的动态效果，如镜头移动、场景元素的合理动作；保持与静态图像的场景一致性；使用专业电影术语描述镜头语言；确保动作流畅自然\",\n  \n  \"video_prompt_N\": \"针对视频主题特有的动态问题进行排除，包括但不限于：sudden movements, unnatural motion, distortion, flickering, warping, anatomy changes, glitching, object multiplication, disappearing elements。同时增加2-3个与当前视频场景特别相关的负向提示词，提高针对性\"\n}\n\n特别注意：\n1. 负向提示词必须与主题高度相关，分析主题可能产生的特定问题并有针对性地排除\n2. 每次生成时，负向提示词应包含一些随机性和变化性，而不是完全固定的模板\n3. 为不同类型的主题（风景、人物、动物、建筑等）定制差异化的负向提示词\n4. 生成的内容避免多头、变形等诡异效果\n5. 提示词富有创意且技术准确，能够激发AI系统创造出令人惊叹的视觉效果\n6. 如果用户的输入本身是随意输入的东西甚至是空的情况，你就当用户给的信息是随机种子，自己区发挥\n7. 需要全部是英文\n \n user: 这是用户给定的信息：\nA girl in a colorful bikini,with a sexy figure,smooth and delicate skin texture.,\n微胖，扭动起来"
+  },
+  {
+    "count": 169,
+    "lastAsked": "2025-11-08T12:42:38.567Z",
+    "question": "in italiano"
+  },
+  {
+    "count": 169,
+    "lastAsked": "2025-11-09T22:43:17.566Z",
+    "question": "Write Code for a Python script"
+  },
+  {
+    "count": 169,
+    "lastAsked": "2025-11-08T20:27:06.011Z",
+    "question": "teşekkürler"
+  }
+]

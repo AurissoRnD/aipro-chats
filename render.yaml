@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: aipro-chats-dashboard
+    env: static
+    buildCommand: echo "No build needed for static site"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,0 +1,414 @@
+[
+  {
+    "count": 1354654,
+    "model": "gpt-4o-mini"
+  },
+  {
+    "count": 319439,
+    "model": "claude-3-7-sonnet@20250219"
+  },
+  {
+    "count": 141018,
+    "model": "gpt-4o"
+  },
+  {
+    "count": 56740,
+    "model": "claude-3-5-sonnet@20240620"
+  },
+  {
+    "count": 12517,
+    "model": "deepseek-ai/DeepSeek-V3"
+  },
+  {
+    "count": 11660,
+    "model": "dall-e-3"
+  },
+  {
+    "count": 10189,
+    "model": "gpt-4.1"
+  },
+  {
+    "count": 9597,
+    "model": "gemini-1.5-pro"
+  },
+  {
+    "count": 9389,
+    "model": "gpt-4-1106-preview"
+  },
+  {
+    "count": 8654,
+    "model": "gpt-5"
+  },
+  {
+    "count": 7992,
+    "model": "claude-sonnet-4@20250514"
+  },
+  {
+    "count": 7120,
+    "model": "gemini-1.5-flash"
+  },
+  {
+    "count": 5014,
+    "model": "gpt-5-mini"
+  },
+  {
+    "count": 4142,
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct-Turbo"
+  },
+  {
+    "count": 2843,
+    "model": "gemini-2.5-flash"
+  },
+  {
+    "count": 2668,
+    "model": "gpt-4-turbo"
+  },
+  {
+    "count": 2447,
+    "model": "deepseek-ai/DeepSeek-R1"
+  },
+  {
+    "count": 2335,
+    "model": "gemini-2.5-pro"
+  },
+  {
+    "count": 2151,
+    "model": "deepseek-ai/deepseek-llm-67b-chat"
+  },
+  {
+    "count": 1816,
+    "model": "o1-preview"
+  },
+  {
+    "count": 1581,
+    "model": "o1-mini"
+  },
+  {
+    "count": 1483,
+    "model": "gpt-4-pro-max"
+  },
+  {
+    "count": 1344,
+    "model": "meta-llama/Meta-Llama-3.1-70B-Instruct-Turbo"
+  },
+  {
+    "count": 1323,
+    "model": "grok-4"
+  },
+  {
+    "count": 1184,
+    "model": "gpt-image-1"
+  },
+  {
+    "count": 1156,
+    "model": "claude-sonnet-4-5@20250929"
+  },
+  {
+    "count": 1025,
+    "model": "gpt-3.5-turbo"
+  },
+  {
+    "count": 969,
+    "model": "grok-3"
+  },
+  {
+    "count": 808,
+    "model": "grok-2"
+  },
+  {
+    "count": 726,
+    "model": "o1"
+  },
+  {
+    "count": 695,
+    "model": "o3-mini"
+  },
+  {
+    "count": 625,
+    "model": "mistralai/Mixtral-8x22B-Instruct-v0.1"
+  },
+  {
+    "count": 596,
+    "model": "gpt-4o-mini-2024-07-18"
+  },
+  {
+    "count": 437,
+    "model": "google/gemma-2-9b-it"
+  },
+  {
+    "count": 355,
+    "model": "deepseek-ai/DeepSeek-R1-Distill-Qwen-1.5B"
+  },
+  {
+    "count": 349,
+    "model": "gemini-2.5-flash-image"
+  },
+  {
+    "count": 295,
+    "model": "grok-4-fast-non-reasoning"
+  },
+  {
+    "count": 293,
+    "model": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF"
+  },
+  {
+    "count": 216,
+    "model": "sonar"
+  },
+  {
+    "count": 199,
+    "model": "mistralai/Mixtral-8x7B-Instruct-v0.1"
+  },
+  {
+    "count": 168,
+    "model": "grok-2-image"
+  },
+  {
+    "count": 158,
+    "model": "databricks/dbrx-instruct"
+  },
+  {
+    "count": 144,
+    "model": "mistralai/Mistral-7B-Instruct-v0.3"
+  },
+  {
+    "count": 122,
+    "model": "grok-3-fast-beta"
+  },
+  {
+    "count": 78,
+    "model": "claude-3-7-sonnet"
+  },
+  {
+    "count": 59,
+    "model": "Qwen/Qwen1.5-72B-Chat"
+  },
+  {
+    "count": 58,
+    "model": "google/gemma-2-27b-it"
+  },
+  {
+    "count": 52,
+    "model": "gemini-exp-1121"
+  },
+  {
+    "count": 37,
+    "model": "gpt-4o-2024-11-20"
+  },
+  {
+    "count": 29,
+    "model": "chatgpt-4o-latest"
+  },
+  {
+    "count": 27,
+    "model": "gpt-3.5-turbo-0125"
+  },
+  {
+    "count": 26,
+    "model": "gpt-4"
+  },
+  {
+    "count": 26,
+    "model": "gpt-4o-2024-08-06"
+  },
+  {
+    "count": 25,
+    "model": "zephyr-7B-beta"
+  },
+  {
+    "count": 16,
+    "model": "gpt-4o-2024-05-13"
+  },
+  {
+    "count": 8,
+    "model": "gemini-2.5-pro-preview-03-25"
+  },
+  {
+    "count": 6,
+    "model": "gemini-1.5-pro-latest"
+  },
+  {
+    "count": 6,
+    "model": "gpt-4-0125-preview"
+  },
+  {
+    "count": 5,
+    "model": "gpt-4.1-mini"
+  },
+  {
+    "count": 5,
+    "model": "openchat_3.5"
+  },
+  {
+    "count": 5,
+    "model": "meta-llama/Llama-4-Maverick-17B-128E-Instruct-FP8"
+  },
+  {
+    "count": 4,
+    "model": "claude-3-5-sonnet-20240620"
+  },
+  {
+    "count": 4,
+    "model": "o3"
+  },
+  {
+    "count": 3,
+    "model": "gemini-2.5-pro-preview-05-06"
+  },
+  {
+    "count": 3,
+    "model": "gemini-2.0-flash"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-0613"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-turbo-2024-04-09"
+  },
+  {
+    "count": 2,
+    "model": "claude-3-sonnet-20240229"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-32k"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-turbo-preview"
+  },
+  {
+    "count": 2,
+    "model": "grok-3-beta"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-vision-preview"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-32k-0314"
+  },
+  {
+    "count": 2,
+    "model": "gemini-2.5-pro-exp-03-25"
+  },
+  {
+    "count": 2,
+    "model": "gpt-3.5-turbo-1106"
+  },
+  {
+    "count": 2,
+    "model": "o1-mini-2024-09-12"
+  },
+  {
+    "count": 2,
+    "model": "gpt-3.5-turbo-16k-0613"
+  },
+  {
+    "count": 2,
+    "model": "gpt-3.5-turbo-16k"
+  },
+  {
+    "count": 2,
+    "model": "gpt-4-32k-0613"
+  },
+  {
+    "count": 2,
+    "model": "gpt-3.5-turbo-instruct"
+  },
+  {
+    "count": 2,
+    "model": "gpt-o3-mini"
+  },
+  {
+    "count": 2,
+    "model": "o4-mini"
+  },
+  {
+    "count": 2,
+    "model": "gemini-2.0-flash-lite"
+  },
+  {
+    "count": 1,
+    "model": "text-davinci-edit-001"
+  },
+  {
+    "count": 1,
+    "model": "o1-preview-2024-09-12"
+  },
+  {
+    "count": 1,
+    "model": "o1-pro"
+  },
+  {
+    "count": 1,
+    "model": "gpt-3.5-turbo-0301"
+  },
+  {
+    "count": 1,
+    "model": "text-embedding-3-small"
+  },
+  {
+    "count": 1,
+    "model": "gpt-4-0314"
+  },
+  {
+    "count": 1,
+    "model": "gpt-3.5-turbo-0613"
+  },
+  {
+    "count": 1,
+    "model": "claude-3-5-sonnet@20241022"
+  },
+  {
+    "count": 1,
+    "model": "gpt-4o-search-preview"
+  },
+  {
+    "count": 1,
+    "model": "gemini-exp-1128"
+  },
+  {
+    "count": 1,
+    "model": "gemini-exp-1114"
+  },
+  {
+    "count": 1,
+    "model": "text-ada-001"
+  },
+  {
+    "count": 1,
+    "model": "gemini-1.5-flash-latest"
+  },
+  {
+    "count": 1,
+    "model": "text-davinci-003"
+  },
+  {
+    "count": 1,
+    "model": "text-curie-001"
+  },
+  {
+    "count": 1,
+    "model": "text-babbage-001"
+  },
+  {
+    "count": 1,
+    "model": "gpt-o3-mini-high"
+  },
+  {
+    "count": 1,
+    "model": "claude-3-5-sonnet-20241022"
+  },
+  {
+    "count": 1,
+    "model": "text-embedding-3-large"
+  },
+  {
+    "count": 1,
+    "model": "gemini-pro"
+  }
+]
