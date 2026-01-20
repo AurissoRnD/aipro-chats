@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chatbot Analytics Dashboard (11.11.2024 - 11.11.2025)</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    * { 
+      margin: 0; 
+      padding: 0; 
+      box-sizing: border-box; 
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: #f5f5f7;
+      min-height: 100vh;
+      padding: 0;
+      color: #1d1d1f;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    
+    header {
+      text-align: center;
+      margin-bottom: 60px;
+      padding: 60px 20px 40px;
+      background: linear-gradient(180deg, rgba(0,0,0,0.02) 0%, rgba(0,0,0,0) 100%);
+    }
+    
+    h1 {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #0071e3 0%, #00c1ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .subtitle {
+      font-size: 21px;
+      color: #86868b;
+      font-weight: 400;
+      margin-bottom: 12px;
+    }
+    
+    .date-range {
+      font-size: 15px;
+      color: #6e6e73;
+      margin-top: 12px;
+      padding: 8px 16px;
+      background: rgba(0,0,0,0.04);
+      border-radius: 12px;
+      display: inline-block;
+      font-weight: 500;
+    }
+    
+    .stats-overview {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-bottom: 48px;
+    }
+    
+    @media (max-width: 768px) {
+      .stats-overview {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    .stat-card {
+      background: white;
+      border-radius: 18px;
+      padding: 32px 24px;
+      border: 1px solid rgba(0,0,0,0.06);
+      text-align: center;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #0071e3 0%, #00c1ff 100%);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+    
+    .stat-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      border-color: rgba(0,113,227,0.1);
+    }
+    
+    .stat-card:hover::before {
+      opacity: 1;
+    }
+    
+    .stat-number {
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: #1d1d1f;
+      margin-bottom: 8px;
+    }
+    
+    .stat-label {
+      color: #86868b;
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+    
+    .stat-info {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #86868b;
+      color: white;
+      text-align: center;
+      line-height: 16px;
+      font-size: 11px;
+      font-weight: bold;
+      cursor: help;
+      position: relative;
+    }
+    
+    .stat-info:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 25px;
+      background: #1d1d1f;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: normal;
+      white-space: nowrap;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    
+    .stat-info:hover::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 19px;
+      border: 6px solid transparent;
+      border-top-color: #1d1d1f;
+      z-index: 1001;
+    }
+    
+    .search-section {
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      margin-bottom: 32px;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+    
+    .search-box {
+      width: 100%;
+      padding: 16px 20px;
+      border: 1.5px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      font-size: 17px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+      background: #f5f5f7;
+      font-family: inherit;
+    }
+    
+    .search-box:focus {
+      border-color: #0071e3;
+      background: white;
+      box-shadow: 0 0 0 3px rgba(0,113,227,0.1);
+    }
+    
+    #searchResults {
+      margin-top: 20px;
+      max-height: 400px;
+      overflow-y: auto;
+    }
+    
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+    
+    @media (max-width: 1024px) {
+      .dashboard-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 32px;
+      border: 1px solid rgba(0,0,0,0.06);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .card:hover {
+      box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+      border-color: rgba(0,113,227,0.1);
+    }
+    
+    .card h2 {
+      color: #1d1d1f;
+      margin-bottom: 24px;
+      font-size: 28px;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    
+    .info-icon {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #0071e3;
+      color: white;
+      text-align: center;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      cursor: help;
+      position: relative;
+      margin-left: 8px;
+    }
+    
+    .info-icon:hover::after {
+      content: attr(data-tooltip);
+      position: absolute;
+      left: 30px;
+      top: -10px;
+      background: #1d1d1f;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: normal;
+      white-space: nowrap;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      max-width: 300px;
+      white-space: normal;
+      width: max-content;
+    }
+    
+    .info-icon:hover::before {
+      content: '';
+      position: absolute;
+      left: 25px;
+      top: 5px;
+      border: 6px solid transparent;
+      border-right-color: #1d1d1f;
+      z-index: 1001;
+    }
+    
+    .card-large {
+      grid-column: span 2;
+    }
+    
+    @media (max-width: 1024px) {
+      .card-large {
+        grid-column: span 1;
+      }
+    }
+    
+    
+    .question-list, .conversation-list {
+      max-height: 600px;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    
+    .question-list::-webkit-scrollbar, .conversation-list::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .question-list::-webkit-scrollbar-track, .conversation-list::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    .question-list::-webkit-scrollbar-thumb, .conversation-list::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    
+    .question-list::-webkit-scrollbar-thumb:hover, .conversation-list::-webkit-scrollbar-thumb:hover {
+      background: rgba(0,0,0,0.3);
+    }
+    
+    .question-item {
+      padding: 20px;
+      margin: 12px 0;
+      background: #f5f5f7;
+      border-radius: 12px;
+      border-left: 3px solid #0071e3;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      cursor: pointer;
+    }
+    
+    .question-item:hover {
+      background: #e8e8ed;
+      transform: translateX(4px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    
+    .question-text {
+      font-weight: 500;
+      color: #1d1d1f;
+      margin-bottom: 10px;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+    
+    .question-meta {
+      font-size: 13px;
+      color: #86868b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .count-badge {
+      background: #0071e3;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    
+    .loading {
+      text-align: center;
+      padding: 60px;
+      color: #86868b;
+      font-size: 17px;
+      font-weight: 500;
+    }
+    
+    .loading::after {
+      content: '...';
+      animation: dots 1.5s steps(4, end) infinite;
+    }
+    
+    @keyframes dots {
+      0%, 20% { content: '.'; }
+      40% { content: '..'; }
+      60%, 100% { content: '...'; }
+    }
+    
+    canvas {
+      height: 350px !important;
+      width: 100% !important;
+    }
+    
+    .topic-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      margin: 10px 0;
+      background: #f5f5f7;
+      border-radius: 10px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    .topic-item:hover {
+      background: #e8e8ed;
+      transform: translateX(4px);
+    }
+    
+    .topic-text {
+      flex: 1;
+      font-weight: 500;
+      color: #1d1d1f;
+      font-size: 15px;
+    }
+    
+    .topic-count {
+      background: #0071e3;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+    }
+    
+    .error {
+      background: #fff5f5;
+      border: 1px solid rgba(255,59,48,0.2);
+      border-radius: 12px;
+      padding: 24px;
+      color: #ff3b30;
+      text-align: center;
+      font-size: 15px;
+    }
+    
+    .model-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      max-height: 480px;
+      overflow-y: auto;
+      padding: 8px;
+    }
+    
+    .model-stats::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    .model-stats::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    
+    .model-stats::-webkit-scrollbar-thumb {
+      background: rgba(0,0,0,0.2);
+      border-radius: 10px;
+    }
+    
+    .model-badge {
+      background: #0071e3;
+      color: white;
+      padding: 12px 16px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      transition: all 0.2s;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .model-badge:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0,113,227,0.3);
+    }
+    
+    .model-badge span:first-child {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      flex: 1;
+    }
+    
+    .model-badge span:last-child {
+      font-weight: 700;
+      background: rgba(255,255,255,0.2);
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      flex-shrink: 0;
+    }
+    
+    /* Conversation viewer styles */
+    .conversation-item {
+      padding: 15px;
+      margin: 10px 0;
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      border-radius: 10px;
+      border-left: 5px solid #764ba2;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+    
+    .conversation-item:hover {
+      background: linear-gradient(135deg, #e9ecef 0%, #dee2e6 100%);
+      transform: translateX(8px);
+    }
+    
+    .conversation-title {
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      font-size: 1.1em;
+    }
+    
+    .conversation-meta {
+      font-size: 0.85em;
+      color: #666;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .message-bubble {
+      padding: 14px 18px;
+      margin: 10px 0;
+      border-radius: 18px;
+      max-width: 85%;
+      word-wrap: break-word;
+      line-height: 1.5;
+      font-size: 15px;
+    }
+    
+    .message-user {
+      background: #0071e3;
+      color: white;
+      margin-left: auto;
+      border-bottom-right-radius: 6px;
+    }
+    
+    .message-assistant {
+      background: #e8e8ed;
+      color: #1d1d1f;
+      margin-right: auto;
+      border-bottom-left-radius: 6px;
+    }
+    
+    .message-time {
+      font-size: 12px;
+      opacity: 0.6;
+      margin-top: 6px;
+    }
+    
+    
+    .tab-container {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 32px;
+      background: #f5f5f7;
+      border-radius: 12px;
+      padding: 4px;
+    }
+    
+    .tab {
+      flex: 1;
+      padding: 12px 20px;
+      background: transparent;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      color: #86868b;
+      font-family: inherit;
+    }
+    
+    .tab:hover {
+      background: rgba(0,0,0,0.04);
+      color: #1d1d1f;
+    }
+    
+    .tab.active {
+      background: white;
+      color: #0071e3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    
+    .tab-content {
+      display: none;
+    }
+    
+    .tab-content.active {
+      display: block;
+    }
+    
+    .btn-primary {
+      background: #0071e3;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      font-family: inherit;
+    }
+    
+    .btn-primary:hover {
+      background: #0077ed;
+      transform: scale(1.02);
+    }
+    
+    .btn-primary:active {
+      transform: scale(0.98);
+    }
+    
+    .btn-primary:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Chatbot Analytics</h1>
+      <p class="subtitle">Understanding what users ask about</p>
+      <div class="date-range">November 11, 2024 – November 11, 2025</div>
+    </header>
+    
+    <!-- Tab Navigation - Removed AI Assistant -->
+    <!-- <div class="tab-container">
+      <button class="tab active" onclick="switchTab('overview')">Overview & Analytics</button>
+    </div> -->
+    
+    <!-- Overview Tab -->
+    <div id="overviewTab" class="tab-content active">
+      <!-- Overview Stats -->
+      <div class="stats-overview" id="statsOverview">
+        <div class="stat-card">
+          <div class="stat-number" id="totalMessages">-</div>
+          <div class="stat-label">
+            Total Messages
+            <span class="stat-info" data-tooltip="All messages (user + AI responses)">ℹ️</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="userMessages">-</div>
+          <div class="stat-label">
+            User Questions
+            <span class="stat-info" data-tooltip="Messages sent by users only">ℹ️</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalConversations">-</div>
+          <div class="stat-label">
+            Conversations
+            <span class="stat-info" data-tooltip="Total conversation threads">ℹ️</span>
+          </div>
+        </div>
+      <div class="stat-card">
+        <div class="stat-number" id="avgPerConvo">-</div>
+        <div class="stat-label">
+          Avg Msgs/Conversation
+          <span class="stat-info" data-tooltip="Average messages per conversation">ℹ️</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="totalUsers">-</div>
+        <div class="stat-label">
+          Unique Users
+          <span class="stat-info" data-tooltip="Total number of distinct users">ℹ️</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" id="avgUsersPerDay">-</div>
+        <div class="stat-label">
+          Avg Users/Day
+          <span class="stat-info" data-tooltip="Average daily active users">ℹ️</span>
+        </div>
+      </div>
+    </div>
+
+      <!-- Search Section -->
+      <div class="search-section">
+        <h2 style="margin-bottom: 20px;">
+          🔍 Search User Prompts
+          <span class="info-icon" data-tooltip="Search through all user messages to find specific topics, keywords, or questions">ℹ️</span>
+        </h2>
+        <p style="color: #86868b; margin-bottom: 16px; font-size: 15px;">
+          Search through all user messages and questions to see what people are asking about
+        </p>
+        <input 
+          type="text" 
+          class="search-box" 
+          id="searchBox" 
+          placeholder="Search for topics, keywords, questions..."
+        >
+        <div id="searchResults"></div>
+      </div>
+
+      <!-- Top Questions -->
+      <div class="dashboard-grid">
+        <div class="card card-large">
+          <h2>
+            📝 Most Frequently Asked Questions
+            <span class="info-icon" data-tooltip="Top 100 most repeated user prompts, showing how many times each was asked">ℹ️</span>
+          </h2>
+          <p style="color: #86868b; margin-bottom: 16px; font-size: 14px;">
+            These are the exact questions and prompts users have typed, ranked by frequency
+          </p>
+          <div id="topQuestions" class="question-list">
+            <div class="loading">Loading top questions</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- All User Messages -->
+      <div class="dashboard-grid">
+        <div class="card card-large">
+          <h2>
+            💬 All User Messages & Prompts
+            <span class="info-icon" data-tooltip="Complete list of user inputs in chronological order - see exactly what users typed">ℹ️</span>
+          </h2>
+          <p style="color: #86868b; margin-bottom: 16px; font-size: 14px;">
+            Browse through all user prompts and messages chronologically
+          </p>
+          <div id="allUserMessages" class="question-list">
+            <div class="loading">Loading all messages</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Timeline & Conversation Topics -->
+      <div class="dashboard-grid">
+        <div class="card">
+          <h2>
+            📈 User Activity Over Time
+            <span class="info-icon" data-tooltip="Daily count of user messages throughout the year - shows engagement trends">ℹ️</span>
+          </h2>
+          <canvas id="timelineChart"></canvas>
+        </div>
+
+        <div class="card">
+          <h2>
+            💬 Popular Conversation Topics
+            <span class="info-icon" data-tooltip="Most common conversation titles - grouped by subject matter">ℹ️</span>
+          </h2>
+          <div id="topTopics" class="question-list">
+            <div class="loading">Loading topics</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Message Length & Model Usage -->
+      <div class="dashboard-grid">
+        <div class="card">
+          <h2>
+            📏 Question Length Distribution
+            <span class="info-icon" data-tooltip="Shows how long user prompts are - most are short, some are detailed">ℹ️</span>
+          </h2>
+          <canvas id="lengthChart"></canvas>
+        </div>
+
+        <div class="card">
+          <h2>
+            🤖 AI Model Usage
+            <span class="info-icon" data-tooltip="Which AI models handled conversations - shows technology preferences">ℹ️</span>
+          </h2>
+          <div id="modelStats">
+            <div class="loading">Loading model stats</div>
+        </div>
+      </div>
+    </div>
+    
+  </div>
+    
+    <!-- AI Chatbot Tab - REMOVED -->
+  </div>
+
+
+  <script>
+    // Global data storage
+    let data = {
+      overview: null,
+      topQuestions: [],
+      timeline: [],
+      messageLengths: [],
+      conversationStats: null,
+      topics: [],
+      modelStats: [],
+      allMessages: [],
+      userStats: null
+    };
+    
+    // Current active tab
+    let activeTab = 'overview';
+    
+    // Switch between tabs
+    function switchTab(tabName) {
+      activeTab = tabName;
+      
+      // Update tab buttons
+      document.querySelectorAll('.tab').forEach(tab => {
+        tab.classList.remove('active');
+      });
+      event.target.classList.add('active');
+      
+      // Update tab content
+      document.querySelectorAll('.tab-content').forEach(content => {
+        content.classList.remove('active');
+      });
+      
+      if (tabName === 'overview') {
+        document.getElementById('overviewTab').classList.add('active');
+      } else if (tabName === 'chatbot') {
+        document.getElementById('chatbotTab').classList.add('active');
+      }
+    }
+    
+    // Utility: Format large numbers
+    function formatNumber(num) {
+      if (num >= 1000000) {
+        return (num / 1000000).toFixed(2) + 'M';
+      } else if (num >= 1000) {
+        return (num / 1000).toFixed(1) + 'K';
+      }
+      return num.toLocaleString();
+    }
+    
+    // Utility: Escape HTML
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+    
+    // Load all data files
+    async function loadData() {
+      try {
+        const files = [
+          'overview.json',
+          'user-stats.json',
+          'top-questions.json',
+          'timeline.json',
+          'message-lengths.json',
+          'conversation-stats.json',
+          'topics.json',
+          'model-stats.json',
+          'all-messages.json'
+        ];
+        
+        const [
+          overview,
+          userStats,
+          topQuestions,
+          timeline,
+          messageLengths,
+          conversationStats,
+          topics,
+          modelStats,
+          allMessages
+        ] = await Promise.all(
+          files.map(file => fetch(`./data/${file}`).then(r => r.json()))
+        );
+        
+        data = {
+          overview,
+          userStats,
+          topQuestions,
+          timeline,
+          messageLengths,
+          conversationStats,
+          topics,
+          modelStats,
+          allMessages
+        };
+        
+        console.log('✅ All data loaded');
+        return true;
+      } catch (error) {
+        console.error('❌ Error loading data:', error);
+        document.body.innerHTML = `
+          <div style="max-width: 800px; margin: 100px auto; padding: 40px; background: white; border-radius: 20px; text-align: center;">
+            <h1 style="color: #c33; margin-bottom: 20px;">⚠️ Data Not Found</h1>
+            <p style="font-size: 1.2em; color: #666; margin-bottom: 30px;">
+              Please run the data export script first:<br><br>
+              <code style="background: #f5f5f5; padding: 10px 20px; border-radius: 10px; display: inline-block;">
+                node export-data.js
+              </code>
+            </p>
+            <p style="color: #999;">
+              This will export data from the database and create the necessary JSON files in the ./data/ directory.
+            </p>
+          </div>
+        `;
+        return false;
+      }
+    }
+    
+    // Load overview statistics
+    function loadOverview() {
+      document.getElementById('totalMessages').textContent = formatNumber(data.overview.totalMessages);
+      document.getElementById('userMessages').textContent = formatNumber(data.overview.totalUserMessages);
+      document.getElementById('totalConversations').textContent = formatNumber(data.overview.totalConversations);
+      document.getElementById('avgPerConvo').textContent = data.conversationStats.avgMessagesPerConversation 
+        ? data.conversationStats.avgMessagesPerConversation.toFixed(1) 
+        : '-';
+      document.getElementById('totalUsers').textContent = formatNumber(data.userStats.totalUniqueUsers);
+      document.getElementById('avgUsersPerDay').textContent = formatNumber(Math.round(data.userStats.avgUsersPerDay));
+    }
+    
+    // Helper: Extract clean user text from system prompts
+    function extractUserText(text) {
+      if (!text || text.trim() === '') return null;
+      
+      // Check if it contains "user:" prefix
+      if (text.includes('user:')) {
+        const parts = text.split('user:');
+        const userPart = parts[parts.length - 1].trim();
+        return userPart || null;
+      }
+      
+      // If no system prefix, return as-is (unless empty)
+      return text.trim() || null;
+    }
+    
+    // Load top questions
+    function loadTopQuestions() {
+      const container = document.getElementById('topQuestions');
+      if (data.topQuestions.length === 0) {
+        container.innerHTML = '<div class="loading">No questions found</div>';
+        return;
+      }
+      
+      // Clean and filter questions
+      const cleanedQuestions = data.topQuestions
+        .map(q => ({
+          ...q,
+          cleanText: extractUserText(q.question)
+        }))
+        .filter(q => q.cleanText) // Remove empty/null
+        .slice(0, 100);
+      
+      if (cleanedQuestions.length === 0) {
+        container.innerHTML = '<div class="loading">No valid questions found</div>';
+        return;
+      }
+      
+      container.innerHTML = cleanedQuestions.map((q, index) => `
+        <div class="question-item" onclick="searchSimilar('${q.cleanText.replace(/'/g, "\\'")}')">
+          <div class="question-text">
+            ${index + 1}. ${escapeHtml(q.cleanText)}
+          </div>
+          <div class="question-meta">
+            <span>Last asked: ${new Date(q.lastAsked).toLocaleDateString()}</span>
+            <span class="count-badge">${q.count}×</span>
+          </div>
+        </div>
+      `).join('');
+    }
+    
+    
+    // Load timeline chart
+    function loadTimeline() {
+      const ctx = document.getElementById('timelineChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.timeline.map(d => {
+            // Format dates to be more readable
+            const date = new Date(d.date);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+          }),
+          datasets: [{
+            label: 'User Messages per Day',
+            data: data.timeline.map(d => d.count),
+            borderColor: '#0071e3',
+            backgroundColor: 'rgba(0, 113, 227, 0.15)',
+            tension: 0.4,
+            fill: true,
+            borderWidth: 3,
+            pointRadius: 2,
+            pointBackgroundColor: '#0071e3',
+            pointBorderColor: '#fff',
+            pointBorderWidth: 2,
+            pointHoverRadius: 6,
+            pointHoverBackgroundColor: '#0071e3',
+            pointHoverBorderWidth: 3
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { 
+              display: true,
+              position: 'top',
+              labels: {
+                font: { size: 14, weight: '600' },
+                color: '#1d1d1f',
+                padding: 16
+              }
+            },
+            tooltip: {
+              mode: 'index',
+              intersect: false,
+              backgroundColor: 'rgba(0,0,0,0.9)',
+              padding: 14,
+              cornerRadius: 10,
+              titleFont: { size: 14, weight: '600' },
+              bodyFont: { size: 14 },
+              callbacks: {
+                label: function(context) {
+                  return 'Messages: ' + formatNumber(context.parsed.y);
+                }
+              }
+            }
+          },
+          scales: {
+            y: { 
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Number of Messages',
+                font: { size: 13, weight: '600' },
+                color: '#1d1d1f',
+                padding: { top: 0, bottom: 10 }
+              },
+              grid: {
+                color: 'rgba(0,0,0,0.08)',
+                drawBorder: false
+              },
+              ticks: {
+                color: '#1d1d1f',
+                font: { size: 13 },
+                callback: function(value) {
+                  return formatNumber(value);
+                },
+                padding: 8
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Date',
+                font: { size: 13, weight: '600' },
+                color: '#1d1d1f',
+                padding: { top: 10 }
+              },
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#1d1d1f',
+                font: { size: 12 },
+                maxRotation: 45,
+                minRotation: 45,
+                padding: 8,
+                maxTicksLimit: 20
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Load popular topics
+    function loadTopics() {
+      const container = document.getElementById('topTopics');
+      if (data.topics.length === 0) {
+        container.innerHTML = '<div class="loading">No topics found</div>';
+        return;
+      }
+      
+      container.innerHTML = data.topics.slice(0, 50).map((topic, index) => `
+        <div class="topic-item">
+          <span class="topic-text">${index + 1}. ${escapeHtml(topic.topic)}</span>
+          <span class="topic-count">${topic.count}</span>
+        </div>
+      `).join('');
+    }
+    
+    // Load message length distribution
+    function loadLengthDistribution() {
+      const lengths = data.messageLengths.map(m => m.length);
+      const buckets = { 
+        '0-50': 0, 
+        '51-100': 0, 
+        '101-200': 0, 
+        '201-500': 0, 
+        '500+': 0 
+      };
+      
+      lengths.forEach(len => {
+        if (len <= 50) buckets['0-50']++;
+        else if (len <= 100) buckets['51-100']++;
+        else if (len <= 200) buckets['101-200']++;
+        else if (len <= 500) buckets['201-500']++;
+        else buckets['500+']++;
+      });
+      
+      const ctx = document.getElementById('lengthChart').getContext('2d');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Short\n(0-50)', 'Brief\n(51-100)', 'Medium\n(101-200)', 'Long\n(201-500)', 'Very Long\n(500+)'],
+          datasets: [{
+            label: 'Number of Messages',
+            data: Object.values(buckets),
+            backgroundColor: [
+              '#34c759',
+              '#0071e3',
+              '#ff9500',
+              '#ff3b30',
+              '#af52de'
+            ],
+            borderRadius: 12,
+            borderWidth: 0,
+            hoverBackgroundColor: [
+              '#30b351',
+              '#0066cc',
+              '#e68600',
+              '#e6342b',
+              '#9d47c9'
+            ]
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: { display: false },
+            tooltip: {
+              backgroundColor: 'rgba(0,0,0,0.9)',
+              padding: 14,
+              cornerRadius: 10,
+              titleFont: { size: 14, weight: '600' },
+              bodyFont: { size: 14 },
+              callbacks: {
+                title: function(context) {
+                  const ranges = ['0-50 characters', '51-100 characters', '101-200 characters', '201-500 characters', '500+ characters'];
+                  return ranges[context[0].dataIndex];
+                },
+                label: function(context) {
+                  const total = Object.values(buckets).reduce((a, b) => a + b, 0);
+                  const percent = ((context.parsed.y / total) * 100).toFixed(1);
+                  return formatNumber(context.parsed.y) + ' messages (' + percent + '%)';
+                }
+              }
+            }
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: 'Number of Messages',
+                font: { size: 13, weight: '600' },
+                color: '#1d1d1f',
+                padding: { top: 0, bottom: 10 }
+              },
+              grid: {
+                color: 'rgba(0,0,0,0.08)',
+                drawBorder: false
+              },
+              ticks: {
+                color: '#1d1d1f',
+                font: { size: 13 },
+                callback: function(value) {
+                  return formatNumber(value);
+                },
+                padding: 8
+              }
+            },
+            x: {
+              title: {
+                display: true,
+                text: 'Message Length Category',
+                font: { size: 13, weight: '600' },
+                color: '#1d1d1f',
+                padding: { top: 10 }
+              },
+              grid: {
+                display: false
+              },
+              ticks: {
+                color: '#1d1d1f',
+                font: { size: 12, weight: '500' }
+              }
+            }
+          }
+        }
+      });
+    }
+    
+    // Load model statistics
+    function loadModelStats() {
+      const container = document.getElementById('modelStats');
+      if (data.modelStats.length === 0) {
+        container.innerHTML = '<div class="loading">No model data found</div>';
+        return;
+      }
+      
+      container.innerHTML = `
+        <div class="model-stats">
+          ${data.modelStats.map(m => `
+            <div class="model-badge" title="${m.model}">
+              <span>${m.model}</span>
+              <span>${formatNumber(m.count)}</span>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    }
+    
+    
+    // Search functionality for messages
+    let searchTimeout;
+    document.getElementById('searchBox').addEventListener('input', (e) => {
+      clearTimeout(searchTimeout);
+      const query = e.target.value.trim().toLowerCase();
+      
+      if (query.length < 3) {
+        document.getElementById('searchResults').innerHTML = '';
+        return;
+      }
+      
+      document.getElementById('searchResults').innerHTML = '<div class="loading">Searching</div>';
+      
+      searchTimeout = setTimeout(() => {
+        // Clean messages and search
+        const cleanedMessages = data.allMessages
+          .map(msg => ({
+            ...msg,
+            cleanText: extractUserText(msg.text)
+          }))
+          .filter(msg => msg.cleanText && msg.cleanText.toLowerCase().includes(query));
+        
+        const results = cleanedMessages.slice(0, 50);
+        
+        const resultsDiv = document.getElementById('searchResults');
+        if (results.length === 0) {
+          resultsDiv.innerHTML = '<div style="text-align: center; padding: 20px; color: #666;">No results found</div>';
+          return;
+        }
+        
+        resultsDiv.innerHTML = `
+          <div style="margin-top: 15px;">
+            <strong style="color: #0071e3;">${results.length}${cleanedMessages.length > 50 ? '+' : ''} results found:</strong>
+            <div style="margin-top: 10px;">
+              ${results.map(r => `
+                <div class="question-item">
+                  <div class="question-text">${escapeHtml(r.cleanText)}</div>
+                  <div class="question-meta">
+                    <span>${new Date(r.createdAt).toLocaleString()}</span>
+                  </div>
+                </div>
+              `).join('')}
+            </div>
+          </div>
+        `;
+      }, 300);
+    });
+    
+    // Helper: Search similar questions
+    function searchSimilar(question) {
+      document.getElementById('searchBox').value = question;
+      document.getElementById('searchBox').dispatchEvent(new Event('input'));
+      document.getElementById('searchBox').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+    
+    // AI Chatbot function removed - feature disabled
+    // Load all user messages
+    function loadAllUserMessages() {
+      const container = document.getElementById('allUserMessages');
+      if (data.allMessages.length === 0) {
+        container.innerHTML = '<div class="loading">No messages found</div>';
+        return;
+      }
+      
+      // Clean and filter messages
+      const cleanedMessages = data.allMessages
+        .map(msg => ({
+          ...msg,
+          cleanText: extractUserText(msg.text)
+        }))
+        .filter(msg => msg.cleanText); // Remove empty/null messages
+      
+      if (cleanedMessages.length === 0) {
+        container.innerHTML = '<div class="loading">No valid messages found</div>';
+        return;
+      }
+      
+      // Show first 500 messages (can be scrolled)
+      const messagesToShow = cleanedMessages.slice(0, 500);
+      
+      container.innerHTML = messagesToShow.map((msg, index) => `
+        <div class="question-item">
+          <div class="question-text">
+            ${index + 1}. ${escapeHtml(msg.cleanText)}
+          </div>
+          <div class="question-meta">
+            <span>${new Date(msg.createdAt).toLocaleString()}</span>
+          </div>
+        </div>
+      `).join('');
+      
+      // Add note if there are more messages
+      if (cleanedMessages.length > 500) {
+        container.innerHTML += `
+          <div style="text-align: center; padding: 20px; color: #86868b; font-size: 14px;">
+            Showing first 500 of ${cleanedMessages.length.toLocaleString()} clean messages. Use search to find specific prompts.
+          </div>
+        `;
+      }
+    }
+    
+    // Initialize dashboard
+    window.addEventListener('load', async () => {
+      console.log('🚀 Loading dashboard...');
+      
+      const success = await loadData();
+      if (!success) return;
+      
+      loadOverview();
+      loadTopQuestions();
+      loadAllUserMessages();
+      loadTimeline();
+      loadTopics();
+      loadLengthDistribution();
+      loadModelStats();
+      
+      console.log('✅ Dashboard loaded successfully!');
+    });
+  </script>
+</body>
+</html>
+
