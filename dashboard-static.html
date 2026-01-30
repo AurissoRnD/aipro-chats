@@ -1018,6 +1018,58 @@
       return text.trim() || null;
     }
     
+    // Helper: Check if message is trivial/greeting (should be filtered out)
+    function isTrivialMessage(text) {
+      if (!text) return true;
+      
+      const cleaned = text.toLowerCase().trim();
+      
+      // List of trivial messages to filter out
+      const trivialPatterns = [
+        // Greetings
+        'hi', 'hello', 'hey', 'hii', 'hiii', 'hiiii', 'helo', 'hellow',
+        'hi!', 'hello!', 'hey!', 'hi.', 'hello.', 'hey.',
+        'good morning', 'good afternoon', 'good evening', 'good night',
+        'morning', 'afternoon', 'evening',
+        'howdy', 'greetings', 'sup', 'yo', 'hiya',
+        
+        // Test messages
+        'test', 'testing', '123', '1234', 'asdf', 'asd',
+        'say 1', 'say 2', 'say 3', 'say one', 'say two', 'say ok',
+        '1', '2', '3', 'one', 'two', 'ok', 'okay', 'yes', 'no',
+        'thanks', 'thank you', 'thx', 'ty',
+        
+        // Single characters/meaningless
+        'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+        'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+        '.', '..', '...', '?', '!', '??', '!!',
+        
+        // Common filler
+        'hm', 'hmm', 'hmmm', 'um', 'umm', 'uh', 'uhh',
+        'idk', 'lol', 'lmao', 'haha', 'hehe',
+        'please', 'pls', 'plz',
+        'help', 'help me', 'can you help',
+        'what', 'why', 'how', 'who', 'when', 'where'
+      ];
+      
+      // Check exact matches
+      if (trivialPatterns.includes(cleaned)) return true;
+      
+      // Check if message is too short (less than 3 characters)
+      if (cleaned.length < 3) return true;
+      
+      // Check if message is just numbers
+      if (/^\d+$/.test(cleaned)) return true;
+      
+      // Check if message starts with common greeting patterns
+      if (/^(hi+|hey+|hello+)\s*[!.,?]*$/i.test(cleaned)) return true;
+      
+      // Check for "say X" pattern
+      if (/^say\s+\w{1,5}$/i.test(cleaned)) return true;
+      
+      return false;
+    }
+    
     // Load top questions
     function loadTopQuestions() {
       const container = document.getElementById('topQuestions');
@@ -1026,13 +1078,13 @@
         return;
       }
       
-      // Clean and filter questions
+      // Clean and filter questions (remove trivial messages like "hi", "say 2", etc.)
       const cleanedQuestions = data.topQuestions
         .map(q => ({
           ...q,
           cleanText: extractUserText(q.question)
         }))
-        .filter(q => q.cleanText) // Remove empty/null
+        .filter(q => q.cleanText && !isTrivialMessage(q.cleanText)) // Remove empty/null AND trivial
         .slice(0, 100);
       
       if (cleanedQuestions.length === 0) {
@@ -1159,6 +1211,33 @@
     }
     
     // Load popular topics
+    // Helper: Check if topic is trivial (should be filtered out)
+    function isTrivialTopic(topic) {
+      if (!topic) return true;
+      
+      const cleaned = topic.toLowerCase().trim();
+      
+      // List of trivial topic titles to filter out
+      const trivialTopics = [
+        'new chat', 'untitled', 'untitled conversation',
+        'claude says two', 'claude says number two', 'claude says one',
+        'say one', 'say two', 'say ok', 'say hello',
+        'initial greeting exchange', 'greeting exchange',
+        'test', 'testing', 'test chat',
+        'hi', 'hello', 'hey'
+      ];
+      
+      // Check exact matches
+      if (trivialTopics.includes(cleaned)) return true;
+      
+      // Check for patterns
+      if (/^(say|claude says)\s+\w+$/i.test(cleaned)) return true;
+      if (/^(test|testing)/i.test(cleaned)) return true;
+      if (/^(hi+|hello+|hey+)\s*$/i.test(cleaned)) return true;
+      
+      return false;
+    }
+    
     function loadTopics() {
       const container = document.getElementById('topTopics');
       if (data.topics.length === 0) {
@@ -1166,7 +1245,17 @@
         return;
       }
       
-      container.innerHTML = data.topics.slice(0, 50).map((topic, index) => `
+      // Filter out trivial topics
+      const filteredTopics = data.topics
+        .filter(topic => !isTrivialTopic(topic.topic))
+        .slice(0, 50);
+      
+      if (filteredTopics.length === 0) {
+        container.innerHTML = '<div class="loading">No meaningful topics found</div>';
+        return;
+      }
+      
+      container.innerHTML = filteredTopics.map((topic, index) => `
         <div class="topic-item">
           <span class="topic-text">${index + 1}. ${escapeHtml(topic.topic)}</span>
           <span class="topic-count">${topic.count}</span>
@@ -1372,13 +1461,13 @@
         return;
       }
       
-      // Clean and filter messages
+      // Clean and filter messages (remove trivial messages like "hi", "say 2", etc.)
       const cleanedMessages = data.allMessages
         .map(msg => ({
           ...msg,
           cleanText: extractUserText(msg.text)
         }))
-        .filter(msg => msg.cleanText); // Remove empty/null messages
+        .filter(msg => msg.cleanText && !isTrivialMessage(msg.cleanText)); // Remove empty/null AND trivial
       
       if (cleanedMessages.length === 0) {
         container.innerHTML = '<div class="loading">No valid messages found</div>';
