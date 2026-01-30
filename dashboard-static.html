@@ -1456,12 +1456,54 @@
         .slice(0, 20); // Limit to 20 for performance
       
       if (matchingConversations.length === 0) {
+        // Fall back to searching all-messages for keywords from the topic
+        const keywords = topicTitle.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+        const relevantMessages = data.allMessages
+          .map(msg => ({
+            ...msg,
+            cleanText: extractUserText(msg.text)
+          }))
+          .filter(msg => {
+            if (!msg.cleanText) return false;
+            const msgLower = msg.cleanText.toLowerCase();
+            return keywords.some(kw => msgLower.includes(kw));
+          })
+          .slice(0, 30);
+        
+        if (relevantMessages.length === 0) {
+          modalConversations.innerHTML = `
+            <div style="text-align: center; padding: 40px; color: #86868b;">
+              <p>No detailed conversation data available for this topic.</p>
+              <p style="font-size: 13px; margin-top: 12px;">
+                This topic represents ${count.toLocaleString()} conversations in the full database,<br>
+                but detailed message content wasn't included in this export sample.
+              </p>
+            </div>
+          `;
+          return;
+        }
+        
+        // Show relevant messages from all-messages
+        modalSubtitle.textContent = `Showing ${relevantMessages.length} related user messages (from keyword search)`;
+        
         modalConversations.innerHTML = `
-          <div style="text-align: center; padding: 40px; color: #86868b;">
-            <p>No conversation details available for this topic in the loaded data.</p>
-            <p style="font-size: 13px; margin-top: 12px;">
-              The full conversation data may not be included in this export.
-            </p>
+          <div style="background: #fff3cd; padding: 16px; border-radius: 12px; margin-bottom: 20px; border-left: 4px solid #ffc107;">
+            <strong>Note:</strong> Full conversation threads not available. Showing individual user messages containing keywords from this topic.
+          </div>
+          ${relevantMessages.map((msg, index) => `
+            <div class="conversation-card">
+              <div class="conversation-card-header">
+                <div class="conversation-card-title">Message ${index + 1}</div>
+                <div class="conversation-card-meta">${new Date(msg.createdAt).toLocaleString()}</div>
+              </div>
+              <div class="message-item user" style="margin: 12px 0 0 0;">
+                <div class="message-sender">👤 User asked:</div>
+                <div class="message-text">${escapeHtml(msg.cleanText)}</div>
+              </div>
+            </div>
+          `).join('')}
+          <div style="text-align: center; padding: 16px; color: #86868b; font-size: 13px;">
+            These are user messages containing keywords: "${keywords.join('", "')}"
           </div>
         `;
         return;
